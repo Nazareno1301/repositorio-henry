@@ -1,0 +1,91 @@
+body{
+    background-color: rgb(255, 136, 0);
+}
+#titulo{
+    color:rgb(228, 121, 0);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    position:fixed;
+    width:100vw;
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+.divclasss{
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#infoNos{
+    text-align: center;
+    font-size: 30px;
+}
+.divclas{
+    display: block;
+    font-size: 18px;
+    background-color: rgb(255, 208, 0);
+    width: 250px;
+    height: 160px;
+}
+.imgClass{
+    background-color: black;
+    padding: 50px;
+    border: 10px groove rgb(22, 22, 22);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-content: space-between;
+}
+.menu{
+    color:aliceblue;
+    width: 300px;
+    height: auto;
+    background:#162447;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 5);
+}
+.menu .btn{
+    color:aliceblue;
+    display: block;
+    padding: 1rem;
+    border-bottom: solid 1px #1f4068;
+    position: relative;
+}
+.menu .submenu{
+    color: aliceblue;
+    background: #1b1b2f;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-heigth .8s ease-out;
+}
+.menu .submenu a{
+    display: block;
+    padding: 1rem;
+    position: relative;
+}
+.menu .submenu a::before{
+    color: aliceblue;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background: #e43f5a;
+    opacity: 0;
+    transition: all .5s;
+}
+.menu .submenu a:hover{
+    padding-left: calc(1rem+5px);
+}
+.menu .submenu a:hover::before{
+    opacity: 1;
+}
+.item:target .submenu{
+    max-height: 20rem;
+}
